@@ -34,9 +34,35 @@ module Rules
         return deck[self.randomPick]
 
     end
+    
+    def identify
+        
+        File.foreach('Deck.txt') do |line|
+            puts line
+        end
+
+    end
+
+    def menu
+        puts "Doblar [1]\tSeparar [2]\tRendirse [3]\tAsegurar [4]"
+        opP = gets.chomp.to_i
+        if opP == 1
+
+        end
+        if opP == 2
+
+        end
+        if opP == 3 
+
+        end
+        if opP == 4
+
+        end
 
 
-  
+
+
+    end
 end
 
 include Rules
@@ -44,6 +70,8 @@ include Rules
 #Deck array of document Deck.txt for each line is a element [0-51]
 ddeck = File.readlines('Deck.txt')
 #puts Deck
+
+    #Rules.identify
     puts "Comenzar partida \n[SI] \n[NO]"
     op = gets.chomp
     if op == "SI"
