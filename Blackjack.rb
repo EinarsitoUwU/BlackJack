@@ -44,7 +44,7 @@ module Rules
     end
 
     def menu
-        puts "Doblar [1]\tSeparar [2]\tRendirse [3]\tAsegurar [4]"
+        puts "Doblar  💰 [1]\tSeparar 🔪 [2]\tRendirse 💀 [3]\tAsegurar 📌 [4]"
         opP = gets.chomp.to_i
         if opP == 1
 
@@ -85,16 +85,8 @@ ddeck = File.readlines('Deck.txt')
             handD = Rules.dealerHand(ddeck)
         end
         puts "Cartas de la casa", handD[0],"🂠"
-
-        puts "Pedir carta [1]"
-        opp = gets.chomp.to_i
-        if opp == 1
-            sol = Rules.pedir(ddeck)
-            while(sol == handP[0] || sol == handP[1])
-                sol = Rules.pedir(ddeck)
-            end
-            puts handP,sol
-        end
+        Rules.menu
+        
     else
         puts "OK"
     end
