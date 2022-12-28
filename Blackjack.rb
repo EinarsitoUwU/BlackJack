@@ -84,7 +84,7 @@ ddeck = File.readlines('Deck.txt')
         while(handP==handD)
             handD = Rules.dealerHand(ddeck)
         end
-        puts "Cartas de la casa", handD[0],"🂠"
+        puts "Cartas de la casa", handD[0],"🂠 "
         Rules.menu
         
     else
